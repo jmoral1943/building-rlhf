@@ -116,3 +116,17 @@ python sft-dpo-llama-runpod.py
 ```
 * **Detach from session:** Press `Ctrl + B`, release, then press `D`.
 * **Reattach to session:** Type `tmux attach`.
+
+---
+
+## Modular Scripts & Notebooks
+
+All notebooks are designed to be ultra-lightweight entry points that delegate execution directly to clean, standalone Python files:
+
+| Python Script | Notebook Runner | Purpose |
+| :--- | :--- | :--- |
+| `sft-dpo-llama-runpod.py` | `sft-dpo-llama-runpod.ipynb` | End-to-end multi-GPU SFT + DPO + Gemini evaluation pipeline on RunPod |
+| `training_colabs/sft.py` | `training_colabs/sft.ipynb` | Supervised Fine-Tuning (SFT) prototype with manual masking |
+| `training_colabs/dpo.py` | `training_colabs/dpo.ipynb` | Direct Preference Optimization (DPO) pairwise likelihood training |
+| `training_colabs/rl_reward_model.py` | `training_colabs/rl-reward-model.ipynb` | Bradley-Terry reward model training with margin loss |
+| `training_colabs/sft_dpo_llama.py` | `training_colabs/sft-dpo-llama.ipynb` | Multi-GPU SFT + DPO pipeline on Llama 3.2 |
